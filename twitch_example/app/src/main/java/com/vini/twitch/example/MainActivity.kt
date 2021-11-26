@@ -12,7 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.vini.twitch.example.screens.MainScreen
-import com.vini.twitchexample.screens.SplashScreen
+import com.vini.twitch.example.screens.SplashScreen
 import com.vini.twitch.example.ui.theme.TwitchExampleTheme
 
 class MainActivity : ComponentActivity() {
