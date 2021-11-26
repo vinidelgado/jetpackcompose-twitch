@@ -4,14 +4,17 @@ on:
   pull_request:
     branches:
       - 'master'
+      - 'main'
       - 'release*'
+env:
+  SAMPLE_PATH: twitch_example
 # Um workflow é composto de um ou mais Jobs que podem ser executados sequencialmente ou em paralelo
 jobs:
   # Este Workflow contém dois Jobs chamados "test"
   test:
     name: Check Code and Tests
     # O tipo de runner em que o job será executado
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     # Steps representam a sequencia de tarefas usando o shell runners que serão executadas como parte do Job
     steps:
     - uses: actions/checkout@v1
@@ -23,9 +26,11 @@ jobs:
         distribution: 'adopt'
     #  Step para rodar testes unitários
     - name: Unit tests
+      working-directory: ${{ env.SAMPLE_PATH }}
       run: ./gradlew test --stacktrace
     # Check with Warnings
     - name: Check Warnings
+      working-directory: ${{ env.SAMPLE_PATH }}
       run: ./gradlew check --warning-mode all
     #Run Espresso Tests
     - name: Espresso Tests
@@ -37,3 +42,4 @@ jobs:
         disable-animations: true
         profile: pixel_3a
         script: ./gradlew connectedCheck
+        working-directory: ${{ env.SAMPLE_PATH }}
