@@ -11,7 +11,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.LargeTest
 import com.vini.twitch.example.helper.ScreenshotComparator
 import com.vini.twitch.example.ui.theme.TwitchExampleTheme
-import com.vini.twitchexample.screens.SplashScreen
+import com.vini.twitch.example.screens.SplashScreen
 import org.junit.Before
 import org.junit.Ignore
 import org.junit.Rule
