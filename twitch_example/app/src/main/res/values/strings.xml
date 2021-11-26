@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Twitch Example</string>
+    <string name="welcome_message">Twitch’e Hoş Geldiniz</string>
+    <string name="welcome_primary_button_label">Oturum açın</string>
+    <string name="welcome_secondary_button_label">Kaydol</string>
+</resources>
