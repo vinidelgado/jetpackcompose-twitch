@@ -13,6 +13,7 @@ import com.vini.twitch.example.helper.ScreenshotComparator
 import com.vini.twitch.example.ui.theme.TwitchExampleTheme
 import com.vini.twitchexample.screens.SplashScreen
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 
@@ -49,6 +50,7 @@ class SplashScreenLayoutTest {
         imageLogo.assertIsDisplayed()
     }
 
+    @Ignore
     @Test
     fun validateSplashScreenScreenshot() {
         val imageLogo = composeTestRule.onNode(

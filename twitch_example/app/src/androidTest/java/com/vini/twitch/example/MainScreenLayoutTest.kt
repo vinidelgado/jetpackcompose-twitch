@@ -15,6 +15,7 @@ import com.vini.twitch.example.helper.ScreenshotComparator
 import com.vini.twitch.example.screens.MainScreen
 import com.vini.twitch.example.ui.theme.TwitchExampleTheme
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 
@@ -67,6 +68,7 @@ class MainScreenLayoutTest {
         validateSecondaryButton()
     }
 
+    @Ignore
     @Test
     fun validateMainScreenScreenshot() {
         ScreenshotComparator.assertScreenshot("main_screen", composeTestRule.onRoot())
